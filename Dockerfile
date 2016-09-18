@@ -5,6 +5,7 @@ ENV REFRESHED_AT 2016-06-05
 
 ENV SWAN_VER 3.17
 ENV DEBIAN_FRONTEND noninteractive
+ENV http_proxy http://out.pusuzhihui.com:7778
 
 RUN apt-get -yqq update \
     && apt-get -yqq --no-install-recommends install \
