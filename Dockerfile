@@ -31,6 +31,9 @@ RUN wget -t 3 -T 30 -nv -O "libreswan-${SWAN_VER}.tar.gz" "https://download.libr
 COPY ./run.sh /run.sh
 RUN chmod 755 /run.sh
 
+RUN export http_proxy=http://out.pusuzhihui.com:7778 \
+	&& export https_proxy=http://out.pusuzhihui.com:7778
+
 EXPOSE 500/udp 4500/udp
 
 VOLUME ["/lib/modules"]
